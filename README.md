@@ -57,22 +57,23 @@ The prior probabilities for 'yes' and 'no' in the 'Play' column are:
 The sizes of the rest of the attribute columns are: 
 {'Outlook': 3, 'Temp.': 3, 'Play': 2, 'Humidity': 2, 'Windy': 2}
 
-Provide conditions for Outlook (sunny/overcast/rainy): 
-Provide conditions for temperature (hot/mild/cool): 
-Provide conditions for humidity (high/normal): 
-Is it windy? (true/false): 
+Provide conditions for Outlook (sunny/overcast/rainy): sunny
+Provide conditions for temperature (hot/mild/cool): hot
+Provide conditions for humidity (high/normal): high
+Is it windy? (true/false): false
 
 The conditional probabilities are as follows:
-P ( Outlook =  | Play =  no ) = ( 1 + 1.0 ) / ( 3 + 1.0 * 5.0 ) =  0.125
-P ( Temp. =  | Play =  no ) = ( 1 + 1.0 ) / ( 3 + 1.0 * 5.0 ) =  0.125
-P ( Humidity =  | Play =  no ) = ( 1 + 1.0 ) / ( 2 + 1.0 * 5.0 ) =  0.14285714285714285
-P ( Windy =  | Play =  no ) = ( 1 + 1.0 ) / ( 2 + 1.0 * 5.0 ) =  0.14285714285714285
-P ( Outlook =  | Play =  yes ) = ( 1 + 1.0 ) / ( 3 + 1.0 * 9.0 ) =  0.08333333333333333
-P ( Temp. =  | Play =  yes ) = ( 1 + 1.0 ) / ( 3 + 1.0 * 9.0 ) =  0.08333333333333333
-P ( Humidity =  | Play =  yes ) = ( 1 + 1.0 ) / ( 2 + 1.0 * 9.0 ) =  0.09090909090909091
-P ( Windy =  | Play =  yes ) = ( 1 + 1.0 ) / ( 2 + 1.0 * 9.0 ) =  0.09090909090909091
+P ( Windy = false | Play =  no ) = ( 1 + 1.0 ) / ( 2 + 1.0 * 5.0 ) =  0.14285714285714285
+P ( Outlook = sunny | Play =  no ) = ( 4 + 1.0 ) / ( 3 + 1.0 * 5.0 ) =  0.5
+P ( Humidity = high | Play =  no ) = ( 5 + 1.0 ) / ( 2 + 1.0 * 5.0 ) =  0.7142857142857143
+P ( Temp. = hot | Play =  no ) = ( 3 + 1.0 ) / ( 3 + 1.0 * 5.0 ) =  0.375
+P ( Windy = false | Play =  yes ) = ( 1 + 1.0 ) / ( 2 + 1.0 * 9.0 ) =  0.09090909090909091
+P ( Outlook = sunny | Play =  yes ) = ( 3 + 1.0 ) / ( 3 + 1.0 * 9.0 ) =  0.25
+P ( Humidity = high | Play =  yes ) = ( 4 + 1.0 ) / ( 2 + 1.0 * 9.0 ) =  0.36363636363636365
+P ( Temp. = hot | Play =  yes ) = ( 3 + 1.0 ) / ( 3 + 1.0 * 9.0 ) =  0.25
 
 Result with Laplacian smoothing:
-no  -->  0.05102040816326531
-yes  -->  0.05844155844155845
+no  -->  0.006833090379008745
+yes  -->  0.0013282172373081465
+
 
