@@ -1,5 +1,5 @@
 ___
-**3. Implementing Naive-Bayes Classifier for the dataset *tennis.csv* along with Laplacian smoothing**
+**Implementing Naive-Bayes Classifier for the dataset *tennis.csv* along with Laplacian smoothing**
 ___
 * Libraries imported : `pandas`
 
