@@ -24,15 +24,14 @@ Next we have a method called `def set_sizes(self)`. This just sets the total num
 Next we have a method called `get_cp(self, attr, attr_type, class_value)`, where we calculate the conditional probability for the given constraints. This function prints and retuurns the required conditional probablity.`k` is the required laplacian constant.                                             
 
        
-    P(attr = attr_type|class_data = class_value) =
-    											k + P(attr_type ∩ class_value)
-                             		 	 ________________________________________________
-                              	            k.(size of distinct attr) + P(class_value)
+    P(attr = attr_type|class_data = class_value) = k + P(attr_type ∩ class_value)
+                             		 	________________________________________________
+                              	            	k.(size of distinct attr) + P(class_value)
                                                     
 After `get_cp`, we have a function called `calculate_conditional_probabilities(self, hypothesis)` which just multiplies the probabilities calculated in the previous function. Here we calculate **Likelihood** of Evidence by multiplying all individual probabilities with their prior probabilities 
         
   	(Outcome|Multiple Evidence) = P(Evidence1|Outcome) x P(Evidence2|outcome) 
-  									    	x ... x P(EvidenceN|outcome) x P(Outcome)
+  									   x ... x P(EvidenceN|outcome) x P(Outcome)
 
 At last, we have a classifying called `classify(self)` which is calls all the required methods and prints the outcome. 
 
